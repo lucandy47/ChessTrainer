@@ -1,0 +1,117 @@
+#game-board {
+    width: 100%;
+}
+
+.profile {
+    background-color: rgb(38, 56, 52);
+}
+
+.categories-item {
+    color: #66FCF1;
+    background-color: rgb(7, 57, 58);
+    height: 70px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.categories-item:hover {
+    background-color: rgb(15, 79, 80);
+    cursor: pointer;
+}
+
+.options-list {
+    width: 260px;
+}
+
+.opening-status {
+    background-color: none;
+    color: #D1E8E2;
+    height: 500px;
+    font-size: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: linear-gradient(45deg, rgba(12, 77, 77, 0.9192051820728291) 10%, rgba(18, 113, 115, 0.7931547619047619) 50%, rgba(12, 77, 77, 1) 90%);
+    border: 0.5px solid black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: rgb(174, 236, 174);
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(62, 133, 62);
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(27, 73, 27);
+    ;
+}
+
+.moves {
+    background-color: none;
+    color: #D1E8E2;
+    height: calc(100vh - 10px);
+}
+
+.title-div {
+    height: 20%;
+    background-color: rgb(38, 56, 52);
+    border: 0.5px solid black;
+}
+
+.desc-div {
+    height: 50%;
+    background-color: rgb(50, 75, 69);
+    color: #D1E8E2;
+    border: 0.5px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.buttons-div {
+    height: 10%;
+    background-color: rgb(38, 56, 52);
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-info {
+    text-align: center;
+}
+
+.button {
+    padding: 10px;
+    width: 100px;
+    background-color: #1F2833;
+    color: white;
+    outline: none;
+}
+
+.button:enabled {
+    background-color: rgb(80, 96, 116);
+}
+
+.button:enabled:hover {
+    background-color: rgb(111, 128, 149);
+}
+
+.link-btn {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(156, 161, 160);
+}
+
+.link-btn:hover {
+    color: #D1E8E2;
+}

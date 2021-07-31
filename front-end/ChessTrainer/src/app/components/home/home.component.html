@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col col-lg-3">
+        <div class="p-2 bd-highlight records-container">
+            <p style="margin-bottom:10px;font-size:20px;">Top 10 active players</p>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let player of players; let i = index" class="table-row">
+                        <th scope="row">{{i+1}}</th>
+                        <td><a href="https://ratings.fide.com/profile/{{player.id}}">{{player.name}}</a></td>
+                        <td>{{player.rating}}</td>
+                        <td>{{player.country}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    <div class="col col-lg-6">
+        <div class="options-container">
+            <div class="row play-buttons">
+                <div class="col col-md-4 col-lg-4 col-sm-4 option-div">
+                    <a routerLink="game">
+                        <i class="fas fa-chess icon-opt"></i>
+                        <p class="button-text">
+                            Play new simple game
+                        </p>
+                    </a>
+                </div>
+                <div class="col col-md-4 col-lg-4 col-sm-4 option-div">
+                    <a routerLink="learn">
+                        <i class="fas fa-chess-board icon-opt"></i>
+                        <p class="button-text">
+                            Openings and tactics
+                        </p>
+                    </a>
+                </div>
+                <div class="col col-md-4 col-lg-4 col-sm-4 option-div">
+                    <a routerLink="game/computer">
+                        <i class="fas fa-desktop icon-opt"></i>
+                        <p class="button-text">
+                            Play vs Computer
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col col-lg-3">
+        <div class="p-2 bd-highlight login-container">
+            <app-login></app-login>
+        </div>
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col col-lg-3 col-md-4 col-sm-5">
+        <div class="p-2 bd-highlight news-container flex-column">
+            <div class="p-1 text-info">Latest chess news</div>
+            <app-news></app-news>
+            <div class="p-1 text-info"><a routerLink="news">Check more news..</a></div>
+        </div>
+
+    </div>
+    <div class="col col-lg-6 col-md-4 col-sm-2">
+        <div class="board-container-1">
+            <div id="board1"></div>
+        </div>
+    </div>
+    <div class="col col-lg-3 col-md-4 col-sm-5 flex-column puzzle-day">
+        <div class="p-2" style="text-align: center;">
+            Puzzle of the day
+        </div>
+        <div class="p-2">
+            <a style="cursor:pointer;" (click)="viewDailyPuzzle(dailyPuzzle.id)">
+                <div id="dailyPuzzle"></div>
+            </a>
+        </div>
+    </div>
+</div>

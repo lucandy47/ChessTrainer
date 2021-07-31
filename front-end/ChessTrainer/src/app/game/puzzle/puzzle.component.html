@@ -1,0 +1,78 @@
+<div class="container-puzzle">
+    <div class="row">
+        <div class="col col-lg-3">
+            <div class="d-flex flex-column mb-3 moves">
+                <div class="p-4 text-center container d-flex justify-content-center ">
+                    <div class="card p-3 profile">
+                        <div class="d-flex align-items-center">
+                            <div class="image"> <img src="./assets/images/avatar.png" alt="avatar" class="rounded" width="150"> </div>
+                            <div *ngIf="user !== undefined" class="ml-3 w-100">
+                                <h4 class="mb-0 mt-0"><a routerLink="/my-profile" style="text-decoration:none; color:#D1E8E2;">{{user.username}}</a></h4>
+                                <span *ngIf="alreadySolved === true" style="color:lightgreen;">You solved this puzzle before.</span>
+                                <span *ngIf="alreadySolved === false">You didn't solve this puzzle before.</span>
+
+                                <div class="mt-2 d-flex flex-row align-items-center">
+                                    <a class="btn btn-sm  w-100" routerLink="/my-profile" class="link-btn" style="margin-right:15px; margin-left:15px;">Profile</a>
+                                    <a class="btn btn-sm  w-100 ml-2" routerLink="/logout" class="link-btn">Logout</a>
+                                </div>
+                            </div>
+
+                            <div *ngIf="user === undefined" class="ml-3 w-100">
+                                <h4 class="mb-0 mt-0">Guest</h4>
+                                <span>Go to home page to <a routerLink="">Login.</a></span>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 puzzle-status">
+                    <div *ngIf="this.status == 'progress'" class="progress-status-div">
+                        Puzzle in progress
+                    </div>
+                    <div *ngIf="this.status == 'lost'" class="current-status-div" style="background-color:rgb(131, 7, 7);border-radius: 20px;">
+                        Puzzle lost
+                    </div>
+                    <div *ngIf="this.status == 'solved'" class="current-status-div" style="background-color:rgb(39, 144, 120); border-radius: 20px;">
+                        Puzzle solved
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-lg-6 ">
+            <div class="d-flex flex-column board-div">
+                <div id="game-board"></div>
+
+            </div>
+        </div>
+
+        <div class="col col-lg-3">
+            <div class="d-flex flex-column mb-3 moves">
+                <div class="p-4 card text-center description-div">
+                    <div class="card-body">
+                        <h4 class="card-title">{{puzzle.title}}</h4>
+                        <p class="card-text">{{puzzle.description}}</p>
+                        <h5 class="card-text" style="color:#45A29E"><i>{{puzzleType}}</i></h5>
+                    </div>
+                </div>
+                <div class="p-4 moves-div">
+                    <div class="playerToMove-div">{{playerToMove}}</div>
+                    <div *ngFor="let move of createMovesMap()">
+                        <li *ngIf="move.correct == true" class="move-correct"><i class="fas fa-check"></i> {{ move.move}} is correct</li>
+                        <li *ngIf="move.correct == false" class="move-incorrect"><i class="fas fa-times"></i> {{ move.move}} is wrong</li>
+                    </div>
+                </div>
+                <div class="p-2 buttons-div">
+                    <button (click)="this.previousPuzzle()" [disabled]="this.id-1 === 0" class="button" title="Previous puzzle"><i class="fas fa-step-backward"></i></button>
+                    <button (click)="this.restartPosition()" class="button" title="Retry"><i class="fas fa-fast-backward"></i></button>
+                    <button (click)="this.flipBoard()" class="button" title="Flip board"><i class="fas fa-random"></i></button>
+                    <button (click)="this.nextPuzzle()" [disabled]="this.id === this.lastId" class="button" title="Next puzzle"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div *ngIf="!checkUserLoggedIn()" class="divForm">
+    <p id="idmesajEroareLogin">{{errorMessage}}</p>
+    <form id="formlog" #loginForm="ngForm" (ngSubmit)="loginUser()">
+        <label id="lutil">Username: </label><input type="text" name="util" id="util" [(ngModel)]="user.username" /><br/>
+        <label id="lpass">Password: </label><input type="password" name="pass" id="pass" [(ngModel)]="user.password" /><br/>
+        <input [disabled]="loginForm.form.invalid" type="submit" value="Login" id="autent" />
+    </form>
+    <p>Don't have an account? <br/><a routerLink="register" style="font-size:15px;">Register!</a></p>
+</div>
+
+<div *ngIf="checkUserLoggedIn()" class="d-flex flex-column">
+    <div class="p-6 div-logged-in">
+        <a class="profile-avatar">
+            <img src="./assets/images/avatar.png" alt="avatar" class="avatar-image">
+        </a>
+
+        <div class="profile-info">
+            <div class="profile-userblock">
+                <div class="profile-username">
+                    <strong>{{loggedInUser.username}}</strong>
+                </div>
+            </div>
+
+            <div class="profile-infos">
+                <div class="my-profile-info">
+                    <i class="fas fa-user icon"></i> {{loggedInUser.role}}
+                </div>
+                <div class="my-profile-info">
+                    <i class="fas fa-at icon"></i> {{loggedInUser.email}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-2 buttons">
+        <div class="row">
+            <div class="col col-sm-6 my-profile-button">
+                <a routerLink="/my-profile" class="link-btn">
+                    Edit Profile
+                </a>
+            </div>
+            <div class="col col-sm-6 logout-button">
+                <a routerLink="/logout" class="link-btn">
+                Logout
+            </a>
+            </div>
+        </div>
+
+    </div>
+</div>

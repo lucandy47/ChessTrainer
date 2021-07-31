@@ -1,0 +1,11 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(7,46,47);
+    background: radial-gradient(circle, rgba(7,46,47,0.7679446778711485) 0%, rgba(17,100,102,1) 0%, rgba(7,46,47,1) 100%);
+}

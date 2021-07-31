@@ -1,0 +1,59 @@
+<div class="container-opening">
+    <div class="row">
+        <div class="col col-lg-3 col-md-3 col-sm-12">
+            <div class="d-flex flex-column mb-3 moves">
+                <div class="p-4 text-center container d-flex justify-content-center ">
+                    <div class="card p-4 profile">
+                        <div class="d-flex align-items-center">
+                            <div class="image"> <img src="./assets/images/avatar.png" alt="avatar" class="rounded" width="150"> </div>
+                            <div *ngIf="user !== undefined" class="ml-2 w-100">
+                                <h2 class="mb-0 mt-0" style="text-decoration:none; color:#D1E8E2; margin-bottom:30px;">{{user.username}}</h2>
+
+                                <div class=" mt-2 d-flex flex-row align-items-center">
+                                    <a class="btn btn-sm  w-100" routerLink="/my-profile" class="link-btn" style="margin-right:15px; margin-left:15px;">Profile</a>
+                                    <a class="btn btn-sm  w-100 ml-2" routerLink="/logout" class="link-btn">Logout</a>
+                                </div>
+                            </div>
+
+                            <div *ngIf="user === undefined" class="ml-3 w-100">
+                                <h4 class="mb-0 mt-0">Guest</h4>
+                                <span>Go to home page to <a routerLink="">Login.</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 opening-status">
+                    <div *ngFor="let opening of openings" class="list-group options-list">
+                        <a (click)="loadOpening(opening.name)" class="list-group-item categories-item">{{opening.name}}</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-lg-6 col-md-6 col-sm-12">
+            <div class="d-flex flex-column board-div">
+                <div id="game-board"></div>
+            </div>
+        </div>
+
+        <div class="col col-lg-3 col-md-3 col-sm-12">
+            <div class="d-flex flex-column mb-3 moves">
+                <div class="p-4 card text-center title-div">
+                    <div class="card-body">
+                        <h4 class="card-title" style="margin-bottom:40px;"><strong>{{this.name}}</strong></h4>
+                        <h5 class="card-text">{{this.pgn}}</h5>
+                    </div>
+                </div>
+                <div class="p-4 desc-div">
+                    {{this.description}}
+                </div>
+                <div class="p-2 buttons-div">
+                    <button (click)="this.undoMove()" [disabled]="this.indexMove == 0" class="button" title="Previous move"><i class="fas fa-step-backward"></i></button>
+                    <button (click)="this.forwardMove()" [disabled]="this.pgn == '' || this.indexMove == this.moves.length" class="button" title="Next move"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

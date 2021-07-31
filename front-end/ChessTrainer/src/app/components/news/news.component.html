@@ -1,0 +1,9 @@
+<div *ngFor="let article of articles" class="text-center container d-flex justify-content-center p-4">
+    <div class="row">
+        <div class="col-sm-6 image-div"><a [href]="article.url" class=""><img [src]="article.urlToImage" class="img-responsive" width="180"></a>
+        </div>
+        <div class="col-sm-6 ">
+          <h3 class="title">{{article.title}}</h3>
+        </div>
+      </div>
+</div>

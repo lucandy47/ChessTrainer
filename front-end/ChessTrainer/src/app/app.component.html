@@ -1,0 +1,36 @@
+<header class="banner">
+        <img id="logo-id"src="../assets/images/logo.png" alt="logo">
+        <div class="container-fluid">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" >Play</a>
+                  <div class="dropdown-content">
+                    <a class="dropdown-item" routerLink="game"> Play solo</a>
+                    <a class="dropdown-item" routerLink="game/computer"> Play vs AI </a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="puzzles">Chess problems</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="learn">Learn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news">News</a>
+                </li>
+                <li class="nav-item">
+                  <a *ngIf="_authenticationService.checkAdmin()" routerLink="admin-panel" class="nav-link">Admin panel</a>
+              </li>
+              </ul>
+        </div>
+</header>
+
+<div class="container-routing">
+  <router-outlet></router-outlet>
+</div>
+<hr class="hor-line"/>
+<app-footer></app-footer>
+

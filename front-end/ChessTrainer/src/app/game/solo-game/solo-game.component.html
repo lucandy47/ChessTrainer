@@ -1,0 +1,73 @@
+<div class="container-game">
+    <div class="row">
+        <div class="col col-lg-3 col-md-3 col-sm-12">
+            <div class="d-flex flex-column mb-3 infos">
+                <div class="p-4 text-center container d-flex justify-content-center ">
+                    <div class="card p-4 profile">
+                        <div class="d-flex align-items-center">
+                            <div class="image"> <img src="./assets/images/avatar.png" alt="avatar" class="rounded" width="150"> </div>
+                            <div *ngIf="user !== undefined" class="ml-2 w-100">
+                                <h2 class="mb-0 mt-0" style="text-decoration:none; color:#D1E8E2; margin-bottom:30px;">{{user.username}}</h2>
+
+                                <div class=" mt-2 d-flex flex-row align-items-center">
+                                    <a class="btn btn-sm  w-100" routerLink="/my-profile" class="link-btn" style="margin-right:15px; margin-left:15px;">Profile</a>
+                                    <a class="btn btn-sm  w-100 ml-2" routerLink="/logout" class="link-btn">Logout</a>
+                                </div>
+                            </div>
+
+                            <div *ngIf="user === undefined" class="ml-3 w-100">
+                                <h4 class="mb-0 mt-0">Guest</h4>
+                                <span>Go to home page to <a routerLink="">Login.</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 extra-status">
+                    <div class="d-flex flex-column">
+                        <div class="p-2 player-info" style="color:black;">
+                            <h2>{{playerTwo}}</h2>
+                        </div>
+                        <div class="p-2 player-info" style="color:bisque">
+                            <h4>vs.</h4>
+                        </div>
+                        <div class="p-2 player-info">
+                            <h2>{{playerOne}}</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6 ">
+            <div class="d-flex flex-column">
+                <div class="p-2 game-info">
+                    <h2>Solo game</h2>
+                </div>
+                <div class="p-2">
+                    <div id="game-board"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-3">
+            <div class="d-flex flex-column mb-3 moves">
+                <div class="p-4 status-div">
+                    <div style="display:flex; justify-content: center; align-items:center; font-size:20px;margin-bottom:40px;"><strong>Game status</strong></div>
+                    <div style="display:flex; justify-content: center; align-items:center; font-size:20px;">{{this.getStatus()}}</div>
+
+                </div>
+                <div class="p-4 moves-div">
+                    <div style="display:flex; justify-content: center; align-items:center; font-size:20px;margin-bottom:40px;"><strong>Move history</strong>
+                    </div>
+                    {{this.getPgn()}}
+                </div>
+                <div class="p-2 buttons-div">
+                    <button (click)="this.restartPosition()" class="button" title="Restart"><i class="fas fa-fast-backward"></i></button>
+                    <button (click)="this.undoMove()" class="button" title="Previous move"><i class="fas fa-step-backward"></i></button>
+                    <button (click)="this.flipBoard()" class="button" title="Flip board"><i class="fas fa-random"></i></button>
+                    <button (click)="this.changeSides()" class="button" title="Change sides" [disabled]="this.game.fen()!=this.originalFen"><i class="fas fa-exchange-alt"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

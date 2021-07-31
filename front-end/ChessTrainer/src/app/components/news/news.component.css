@@ -1,0 +1,7 @@
+.title{
+    font-size:15px;
+}
+.container{
+    overflow-x: hidden;
+    overflow-y: auto;
+}

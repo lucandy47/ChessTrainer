@@ -1,0 +1,59 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 py-5 text-div text-center">
+                <div class="card-body">
+                    <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:40%">
+                    <h2 class="py-3">Registration</h2>
+                    <p style="font-size:20px;">Register to our website to get better at chess!</p>
+                </div>
+        </div>
+
+        <div class="col-md-8 py-5 form-div text-white">
+            <img style="width:150px;margin-bottom:20px;" src="assets/images/sign-up.png" alt="register-usericon"/>
+            <p id="idmesajEroare">{{errorMessage}}</p>
+            <form class="form-horizontal" #registerForm="ngForm" (ngSubmit)="registerUser()">
+                <div class="form-group row">
+                    <label for="full_name" class="col-sm-4 col-form-label text-md-center">*Username</label>
+                    <div class="col-md-7">
+                        <input type="text" name="util" id="util" class="form-control"  [(ngModel)]="user.username"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="full_name" class="col-sm-4 col-form-label text-md-center">First name:</label>
+                    <div class="col-md-7">
+                        <input type="text" name="nume" id="prenume" class="form-control"  [(ngModel)]="user.firstName"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="full_name" class="col-sm-4 col-form-label text-md-center">Last name:</label>
+                    <div class="col-md-7">
+                        <input type="text" name="prenume" id="nume" class="form-control"  [(ngModel)]="user.lastName"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="full_name" class="col-sm-4 col-form-label text-md-center">*Password:</label>
+                    <div class="col-md-7">
+                        <input type="password" name="pass" id="pass" #pass="ngModel"  class="form-control" [(ngModel)]="user.password" required/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="full_name" class="col-sm-4 col-form-label text-md-center">*Password confirmation:</label>
+                    <div class="col-md-7">
+                        <input type="password" name="passconf" id="passconf" #passconf="ngModel" class="form-control" (ngModel)="user.password" required/>
+                    </div>
+                </div>
+                <p id="idmesajEroare" [class.d-none]="(passconf.value==pass.value) || passconf.untouched">Passwords don't match!</p>
+                <div class="form-group row">
+                    <label for="full_name" class="col-sm-4 col-form-label text-md-center">Email:</label>
+                    <div class="col-md-7">
+                        <input type="email" name="email" id="email" class="form-control"  [(ngModel)]="user.email"/>
+                    </div>
+                </div>
+                <div class="input-div">
+                    <input [disabled]="registerForm.form.invalid" type="submit" value="Register" id="autent"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+#game-board {
+    width: 100%;
+}
+
+.profile {
+    background-color: rgb(38, 56, 52);
+}
+
+.puzzle-status {
+    background: linear-gradient(45deg, rgba(12, 77, 77, 0.9192051820728291) 10%, rgba(18, 113, 115, 0.7931547619047619) 50%, rgba(12, 77, 77, 1) 90%);
+    border-radius: 10px;
+    color: #D1E8E2;
+    height: 500px;
+    border: 0.5px solid black;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-status-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    font-size: 25px;
+}
+
+.progress-status-div:after {
+    content: "...";
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis-dot 2s infinite .3s;
+    animation-fill-mode: fowards;
+    width: 1.25em;
+}
+
+@keyframes ellipsis-dot {
+    25% {
+        content: "";
+    }
+    50% {
+        content: ".";
+    }
+    75% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
+}
+
+.moves {
+    background-color: none;
+    color: #D1E8E2;
+    height: calc(100vh - 10px);
+}
+
+.description-div {
+    height: 20%;
+    background-color: rgb(38, 56, 52);
+    border: 0.5px solid black;
+}
+
+.moves-div {
+    height: 50%;
+    background-color: rgb(50, 75, 69);
+    color: #D1E8E2;
+    border: 0.5px solid black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.playerToMove-div {
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5%;
+}
+
+.buttons-div {
+    height: 10%;
+    background-color: rgb(38, 56, 52);
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-info {
+    text-align: center;
+}
+
+.move-correct {
+    list-style-type: none;
+    padding: 8px;
+    background-color: #D1E8E2;
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+    border-radius: 5%;
+}
+
+.move-incorrect {
+    list-style-type: none;
+    padding: 8px;
+    background-color: #D1E8E2;
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.button {
+    padding: 10px;
+    width: 100px;
+    background-color: #1F2833;
+    color: white;
+    outline: none;
+}
+
+.button:enabled {
+    background-color: rgb(80, 96, 116);
+}
+
+.button:enabled:hover {
+    background-color: rgb(111, 128, 149);
+}
+
+.link-btn {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(156, 161, 160);
+}
+
+.link-btn:hover {
+    color: #D1E8E2;
+}

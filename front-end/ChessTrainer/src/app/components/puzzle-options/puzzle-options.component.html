@@ -1,0 +1,31 @@
+<div class="container-puzzles">
+
+    <div class="row">
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="list-group options-list">
+                <a class="list-group-item description-item"><strong>Categories</strong></a>
+                <a (click)="switchOptionMateIn2()" class="list-group-item categories-item">Mate in 2</a>
+                <a (click)="switchOptionMateIn3()" class="list-group-item categories-item">Mate in 3</a>
+                <a (click)="switchOptionMateIn4()" class="list-group-item categories-item">Mate in 4</a>
+                <a (click)="switchOptionPositionsAdvantage()" class="list-group-item categories-item">Winning sacrifices</a>
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-md-6 col-sm-12">
+            <div class="row">
+                <div *ngFor="let puzzle of puzzles" class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="img-div">
+                            <a (click)="viewPuzzle(puzzle.id)">
+                                <div [id]="puzzle.id" class="chessboard"></div>
+                            </a>
+                        </div>
+                        <app-puzzle-item [puzzle]="puzzle"></app-puzzle-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

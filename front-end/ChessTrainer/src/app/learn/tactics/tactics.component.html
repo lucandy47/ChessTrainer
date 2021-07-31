@@ -1,0 +1,31 @@
+<div class="container-puzzles">
+
+    <div class="row">
+
+        <div class="col-lg-2 col-md-6 col-sm-12">
+            <div class="list-group options-list">
+                <a (click)="switchOptionDoubleAttack()" class="list-group-item categories-item">Double attack and fork</a>
+                <a (click)="switchOptionDiscoveryAttack()" class="list-group-item categories-item">Discover attack</a>
+                <a (click)="switchOptionPin()" class="list-group-item categories-item">Pinned pieces</a>
+                <a (click)="switchOptionOverloading()" class="list-group-item categories-item">Overloading</a>
+            </div>
+        </div>
+
+        <div class="col-lg-10">
+            <div class="row">
+                <div *ngFor="let puzzle of puzzles" class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="img-div">
+                            <a (click)="viewPuzzle(puzzle.id)">
+                                <div [id]="puzzle.id" class="chessboard"></div>
+                            </a>
+                        </div>
+                        <app-puzzle-item [puzzle]="puzzle"></app-puzzle-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

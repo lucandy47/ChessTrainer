@@ -1,0 +1,115 @@
+.extra-status {
+    background-color: none;
+    color: #D1E8E2;
+    height: 500px;
+    font-size: 20px;
+    background: linear-gradient(45deg, rgba(12, 77, 77, 0.9192051820728291) 10%, rgba(18, 113, 115, 0.7931547619047619) 50%, rgba(12, 77, 77, 1) 90%);
+    border: 0.5px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.players-div {
+    display: flex;
+}
+
+.btn-diff {
+    background-color: #11380b;
+    border-radius: 8px;
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 35px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.btn-diff:hover {
+    background-color: #1e5c14;
+}
+
+.btn-diff:active {
+    position: relative;
+    top: 1px;
+}
+
+.game-info {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #66FCF1;
+}
+
+.profile {
+    background-color: rgb(38, 56, 52);
+    width: 600px;
+}
+
+#game-board {
+    width: 100%;
+}
+
+.infos {
+    color: #D1E8E2;
+    height: calc(100vh - 70px);
+}
+
+.moves {
+    color: #D1E8E2;
+    height: calc(100vh - 70px);
+    border: 0.5px solid black;
+}
+
+.status-div {
+    height: 20%;
+    background-color: rgb(38, 56, 52);
+}
+
+.moves-div {
+    height: 60%;
+    background-color: rgb(50, 75, 69);
+    color: #D1E8E2;
+    font-size: 18px;
+}
+
+.buttons-div {
+    height: 20%;
+    background-color: rgb(38, 56, 52);
+    border: 0.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-info {
+    text-align: center;
+}
+
+.button {
+    padding: 10px;
+    width: 100px;
+    background-color: #1F2833;
+    color: white;
+    outline: none;
+}
+
+.button:enabled {
+    background-color: rgb(80, 96, 116);
+}
+
+.button:enabled:hover {
+    background-color: rgb(111, 128, 149);
+}
+
+.link-btn {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(156, 161, 160);
+}
+
+.link-btn:hover {
+    color: #D1E8E2;
+}

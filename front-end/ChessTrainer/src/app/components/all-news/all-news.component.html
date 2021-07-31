@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col col-lg-9">
+        <article *ngFor="let article of articles" class="post">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                    <div class="post-img">
+                        <a [href]="article.url"><img [src]="article.urlToImage" class="img-responsive" alt="image post"></a>
+                    </div>
+                    <div class="author-info">
+                        <p>Posted on:</p>
+                        <strong>{{article.date}}</strong>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                    <div class="caption">
+                        <h3><a [href]="article.url">{{article.title}}</a></h3>
+                        <hr>
+                        <p> {{article.description.slice(0,250)}}...<a [href]="article.url">read more</a> </p>
+                        <hr>
+                        <div class="btn-div">
+                            <a class="btn btn-default" [href]="article.url">Go to original article</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+    <div class="col col-lg-3">
+        <div class="p-2 bd-highlight login-container">
+            <app-login></app-login>
+        </div>
+    </div>
+</div>
