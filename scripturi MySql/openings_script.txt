@@ -1,0 +1,47 @@
+CREATE TABLE openings(
+  id_opening INT(2) PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(80) NOT NULL,
+  eco VARCHAR(4),
+  fen VARCHAR(150) NOT NULL,
+  pgn VARCHAR(500) NOT NULL,
+  description VARCHAR(500)
+);
+
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Ruy Lopez","C70","r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq","1. e4 e5 2. Nf3 Nc6 3. Bb5","It's one of the most played and easy for beginners to learn openings in the game, but it's also played among very high rated players.Also called The Spanish Game, the main idea is to put pressure on the knight which guards the center.");
+
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Italian Game","C50","r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq","1. e4 e5 2. Nf3 Nc6 3. Bc4","The main idea of this opening is to develop the bishop to a strong diagonal, occupying the center of the table and attacking the king's side.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Italian Game: Giuco Piano","C55","r1bqk2r/ppp2ppp/3p1n2/4p1B1/2BnP3/8/PPP2PPP/RN1Q1RK1 w kq","1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. O-O Bc5 5. d4 Bxd4 6. Nxd4 Nxd4 7. Bg5 d6","It's a variation of the Italian Game in which white takes the center's control very fast in order to develop its pieces much more faster than black.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Italian Game: Giuco Pianissimo","C53","r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQK2R b KQkq","1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d3","It's a variation of the Italian Game: Giuco Piano but much more quieter. The idea is to consolidate the E4 pawn which fights for the center of the table.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Four Knights Game","C46","r1bqkb1r/pppp1ppp/2n2n2/4p3/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq","1. e4 e5 2. Nf3 Nc6 3. Nc3 Nf6","This opening is very common and standard among low and medium rated players in which both sides develop both of their knights to control the center.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Scotch Game","C44","r1bqkbnr/pppp1ppp/2n5/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq","1. e4 e5 2. Nf3 Nc6 3. d4","Scotch Game is one of the fastest openings for white to gain control of the table's center. Very popular in the 19th century.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Sicilian Defense: Najdorf Variation","B90","rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq","1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6","Sicilian Defense is probably the most played defense in the world at the moment. The Najdorf variation is played when black wants to control the b5 square against the knights and bishop to develop early.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Sicilian Defense: Dragon Variation","B70","rnbqkb1r/pp2pp1p/3p1np1/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq","1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6","The Dragon variation is played when black wants to develop early the f8 bishop for an early king castling. This is a very aggressive defense for black.");
+
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Sicilian Defense: Accelerated Dragon","B34","rnbqkbnr/pp2pp1p/3p2p1/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq","1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 g6","The accelerated Dragon is a much faster variation for the classic Dragon in which black develops very fast the fianchetto bishop to control the center.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Sicilian Defense: Scheveningen Variation","B80","rnbqkb1r/pp3ppp/3ppn2/8/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq","1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6","The Scheveningen variation for Sicilian defense is extremely common and the main idea is that black lets white to control the table's center, but slowly is trying to fight and gain back that control over it.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Caro-Kann Defense","B10","rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq","1. e4 c6","The caro-kann is very similar to the french but allows for a less cramped position. The point of c6 allows a similar attack on the center with d5. This move also allows the queen to give surprise checks.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Scandinavian Defense","B01","rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq","1. e4 d5","The Scandinavian is an opening where black counters e4 with d5, an immediate attack on the center and forcing white to make a more immediate decision right in the beginning in the game. The Normal response would be just to take the pawn on d5 thinking that their opponents would play Qxd5. However, if white takes this pawn, more advanced players choose to develop their knight to f6 rather than take back immediately.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Alekhine Defense","B02","rnbqkb1r/ppp1pppp/3p4/3nP3/2PP4/8/PP3PPP/RNBQKBNR b KQkq","1. e4 Nf6 2. e5 Nd5 3. d4 d6 4. c4","The Alekhine Defense was introduced by the GM and World Champion(1927-1935, 1937-1946) Alexandr Alekhine and the main idea of it is that black allows white to take control of the table's center with its pawns, black repositionating its knight on the queenside and later attacks the pushed white's pawn structure.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Queen's Pawn Game: London System","D02","rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/5N2/PPP1PPPP/RN1QKB1R b KQkq","1. d4 d5 2. Nf3 Nf6 3. Bf4","This variation of the Queen's Pawn Game which is much slower than the Queen's Pawn Gambit and the idea of it is to control the e5 square and develop very fast the pieces.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Queen's Gambit","D06","rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR b KQkq","1. d4 d5 2. c4","Queen's Gambit is the most played variation for the Queen's Pawn Game which allows white to directly attack the black's pawn in the center of the table and to gain control on the C column by sacrificing the c pawn. It is considered one of the oldest openings in chess.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Nimzo-Indian Defense","E20","rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq","1. d4 Nf6 2. c4 e6 3. Nc3 Bb4","Black allows white to take control of the table's center with the pawns with a short delay which gives black an advantage that it can have a flexible defence against white.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("King's Indian Defense","E61","rnbqk2r/ppppppbp/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq","1. d4 Nf6 2. c4 g6 3. Nc3 Bg7","Black allows white to take control of the table's center with the plan to destroy it later by using a very fast bishop fianchetto.");
+
+INSERT INTO openings(name,eco,fen,pgn,description) VALUES("Slav Defense","D10","rnbqkbnr/pp2pppp/2p5/3p4/2PP4/8/PP2PPPP/RNBQKBNR w KQkq","1. d4 d5 2. c4 c6","The Slav position defenses the black d5 pawn to the Queen's Gambit in order to fight the table's center and for the C column.");

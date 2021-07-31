@@ -1,0 +1,18 @@
+create database chesstrainer;
+use chesstrainer;
+
+CREATE TABLE users(id_user INT(3) PRIMARY KEY AUTO_INCREMENT, 
+	username VARCHAR(40) NOT NULL, 
+	password VARCHAR(50) NOT NULL,
+	last_name VARCHAR(40),
+	first_name VARCHAR(50),
+	email VARCHAR(60) NOT NULL, 
+	role VARCHAR(25) NOT NULL);
+
+Insert into users values(NULL, "tiron", "lucian", "Tiron", "Lucian", "luciantir98@gmail.com", "admin");
+Insert into users values(NULL, "anonymus", "anonymus", "Gherghevici", "Radu", "radug@gmail.com", "user");
+
+
+
+
+

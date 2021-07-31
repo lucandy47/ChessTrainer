@@ -1,0 +1,9 @@
+CREATE TABLE solved_puzzles(
+	id_user INT(3) NOT NULL,
+	id_puzzle INT(3) NOT NULL,
+	solved BOOLEAN NOT NULL,
+	FOREIGN KEY (id_user) REFERENCES users(id_user),
+	FOREIGN KEY (id_puzzle) REFERENCES puzzles(id_puzzle)
+);
+
+INSERT INTO solved_puzzles(id_user,id_puzzle,solved) VALUES(1,1,TRUE);

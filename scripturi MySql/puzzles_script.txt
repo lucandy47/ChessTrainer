@@ -1,0 +1,79 @@
+
+CREATE TABLE puzzles(id_puzzle INT(3) PRIMARY KEY AUTO_INCREMENT,
+	type VARCHAR(15) NOT NULL, 
+	title VARCHAR(150) NOT NULL, 
+	description VARCHAR(50), 
+	fen VARCHAR(120) NOT NULL, 
+	pgn VARCHAR(500) NOT NULL);
+
+--mate in 2
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Wilfried Paulsen vs Adolf Anderssen","Frankfurt, 1878","5rk1/1p1q2bp/p2pN1p1/2pP2Bn/2P3P1/1P6/P4QKP/5R2 w - - 0 1","1. Qxf8+ Bxf8 2. Rxf8#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Wilhelm Steinitz vs David Sands","New York, 1887","r4br1/3b1kpp/1q1P4/1pp1RP1N/p7/6Q1/PPB3PP/2KR4 w - - 0 1","1. Qg6+ hxg6 2. fxg6#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Harry Pillsbury vs Lyons Rodgers","New York, 1893","3q2r1/4n2k/p1p1rBpp/PpPpPp2/1P3P1Q/2P3R1/7P/1R5K w - - 0 1","1. Qxh6+ Kxh6 2. Rh3#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","James Mason vs Georg Marco","Leipzig, 1894","6k1/pp4p1/2p5/2bp4/8/P5Pb/1P3rrP/2BRRN1K b - - 0 1","1... Rg1+ 2. Kxg1 Rxf1#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Alexander Alekhine vs Fahardo","Montevideo, 1939","4r3/pbpn2n1/1p1prp1k/8/2PP2PB/P5N1/2B2R1P/R5K1 w - - 0 1","1. Rxf6+ Nxf6 2. g5#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Vladimir Petrov vs H Cordova","Buenos Aires, 1939","1q5r/1b1r1p1k/2p1pPpb/p1Pp4/3B1P1Q/1P4P1/P4KB1/2RR4 w - - 0 1","1. Qxh6+ Kxh6 2. Rh1#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Boris Ratner vs Alexander Konstantinopolsky","Moscow, 1945","1r4k1/3b2pp/1b1pP2r/pp1P4/4q3/8/PP4RP/2Q2R1K b - - 0 1","1... Rxh2+ 2. Kxh2 Qh4#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Enrico Paoli vs Jan Foltys","Trencianske Teplice, 1949","8/2k2p2/2b3p1/P1p1Np2/1p3b2/1P1K4/5r2/R3R3 b - - 0 1","1... Bb5+ 2. Nc4 Rd2#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Boris Spassky vs Boris Vladimirov","Baku, 1961","r2Rnk1r/1p2q1b1/7p/6pQ/4Ppb1/1BP5/PP3BPP/2K4R w - - 0 1","1. Qxe8+ Qxe8 2. Bc5#");
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_2","Vlastimil Hort vs Bent Larsen","Sousse, 1967","8/2r2pk1/3p2p1/3Pb3/2P1P2K/6r1/1R2B3/1R6 b - - 0 1","1... Kh6 2. c5 g5#");
+
+--mate in 3
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_3","Joseph Blackburne vs Adolf Anderssen","Vienna, 1873","Q4R2/3kr3/1q3n1p/2p1p1p1/1p1bP1P1/1B1P3P/2PBK3/8 w - - 0 1","1. Qc8+ Kd6 2. Rxf6+ Re6 3. Rxe6#");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_3","Emanuel Lasker vs Frank Marshall","St Petersburg, 1914","1k1r4/3b1p2/QP1b3p/1p1p4/3P2pN/1R4P1/KPPq1PP1/4r2R w - - 0 1","1. Qa7+ Kc8 2. Qa8+ Bb8 3. Qa6#");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_3","Alexander Alekhine vs S Wainstein","Odessa, 1916","r3q2k/1bn2p2/p4P1p/1pPp2R1/3P4/P1N1Q3/1PB3PP/6K1 w - - 0 1","1. Rg8+ Kxg8 2. Qg3+ Kh8 3. Qg7#");
+
+
+--mate in 4
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_4","Vlad-Cristian Jianu vs Atanas Kolev","Plovdiv 2/ 4/2013","2r4k/p4rRp/1p1R3B/5p1q/2Pn4/5p2/PP4QP/1B5K w - - 0 1","1. Rg8+ Rxg8 2. Qxg8+ Kxg8 3. Rd8+ Rf8 4. Rxf8#");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_4","Ivan Sokolov vs Alexandre Danin","Koege, 4/23/2013","6r1/Q4p2/4pq1k/3p2Nb/P4P1K/4P3/7P/2R5 b - - 0 1","1... Rxg5 2. Qe7 Rg4+ 3. Kh3 Qxe7 4. Rc8 Qh4#");
+
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("mate_in_4","Azer Mirzoev vs Constantin Lupulescu","Legnica, 5/7/2013","5rk1/p3br1p/8/2p3p1/N2pPB2/1P1P1qPb/P2Q3P/R3R1K1 b - - 0 1","1... Rxf4 2. gxf4 Rxf4 3. Rac1 Rg4+ 4. Qg2 Qxg2#");
+
+
+--double attack
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("dbl_att","Jan Hein Donner vs Arthur Dunkelblum","Beverwijk, 1964","2rqrb2/p2nk3/bp2pnQp/4B1p1/3P4/P1N5/1P3PPP/1B1RR1K1 w - - 0 1","1. Nd5+ exd5 2. Bxf6+ Kd6 3. Be5+ Ke7 4. Bd6#");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("dbl_att","Sergey Pavlov vs Boris Savchenko","Voronezh, 2019","4b2k/2p5/3qnpp1/2N1n2p/p1B1P3/2P1BP2/2r3PP/3RQ1K1 b - - 0 1","1... Nxf3+");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("dbl_att","Ioannis Papaioannou vs Jesus Nogueiras Santiago","Chalkidiki, 1992","3r2k1/p6p/4R3/2p5/N3n3/4p1P1/P3Rb1P/7K b - - 0 1","1... Rd1+ 2. Kg2 Rg1+ 3. Kh3 Ng5+");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("dbl_att","Johannes Engel vs Ulf Andersson","Bad Wiessee, 2016","2r1n1k1/1bq2pp1/p3p2p/4n3/1P1R1Q2/2N2N1P/1P3PP1/1B4K1 b - - 0 1","1... Nxf3+ 2. gxf3 e5");
+
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("dbl_att","Anish Giri vs Jan De Jong","Netherlands, 2011","1r2rn1k/5p1p/p7/1p1p1pQN/8/6P1/Pq3P1P/3RR1K1 w - - 1 0","1. Rxe8 Rxe8 2. Nf6");
+
+--discover att
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("disc_att","Boris Kreiman vs Gary De Fotis","Philadelphia, 1996","r4r2/1b2b1kp/p3P1p1/2pnP1B1/Bp6/8/PPP3PP/3R1RK1 w - - 0 1","1. Bxe7 Nxe7 2. Rd7");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("disc_att","Isaac Boleslavsky vs W Janes","Riga, 1968","3qkr2/pp3pQp/3p1Pp1/4pb2/2r5/5NP1/PPP4P/1K1RR3 w - - 0 1","1. Rxe5+ Kd7 2. Rxf5 gxf5 3. Ne5+");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("disc_att","Jiner Zhu vs Zhongyi Tan","China, 2017","8/ppkbQ2p/1q1p2B1/2n1p3/2P5/2P5/P5PP/3R2K1 b - - 0 1","1... Nd3+ 2. Kh1 Nf2+ 3. Kg1 Nh3+");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("disc_att","Piotr Nguyen vs Jaime Santos Latasa","Budapest, 2019","3r1rk1/1bq4p/pN2p1p1/P2pb3/1Q2n3/BPPB4/3P2PP/R4RK1 b - - 0 1","1... Bxh2+ 2. Kh1 Ng3+ 3. Kxh2 Nxf1+");
+
+--pin
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("pin","Zhongyi Tan vs Xiaowen Zhang","Jiangsu Wuxi, 4/14/2012","2b1k3/p2q4/3PnQ2/Pp1B4/1P3P2/6PP/7K/8 w - - 0 1","1. Bc6");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("pin","Igor Kurnosov vs Sergio Estremera Panos","Abudhabi, 2013","r7/1p1qnQpk/1pp5/3pP1B1/3P2b1/7P/PP6/5RK1 w - - 0 1","1. Rf6 Ng8 2. Qg6+ Kh8 3. Rf7");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("pin","Karol Jaroch vs Oskar Wieczorek","Chorzow, 2019","4rr1k/1p4p1/p1pp3p/2P5/Q3B3/PPP3Pb/5q1P/R3R2K b - - 0 1","1... Bg2+ 2. Bxg2 Rxe1+");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("pin","Diego Flores vs Jose Martinez Alcantara","Antofagasta, 2019","6k1/p4Np1/1p1qrn1Q/3b1p2/3P3P/1B4R1/PP3PP1/6K1 b - - 0 1","1... Re1+ 2. Kh2 Ng4+");
+
+--overloading
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("overloading","Natalia Zhukova vs Thomas Paehtz","Gibraltar, 2016","8/Q1q1r1k1/1r1pP2p/6p1/2P2p1P/1P3bP1/P2R1P2/4R1K1 w - - 0 1","1. Qxc7 Rxc7 2. e7");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("overloading","Manuel Diaz Begonte vs Anton Guijarro","Madrid, 2006","r1b1kb1r/ppqp1ppp/2n1p3/8/2B1P1n1/2N2N1P/PP2QPP1/R1B2RK1 b kq - 0 1","1... Nd4 2. Qd3 Nxf3+ 3. Qxf3 Qh2#");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("overloading","Hua Ni vs Vadim Malakhatko","Gibraltar, 2008","r5k1/pp2R3/2pB1nb1/3p1q1p/3P1Q2/2P4P/PP3PP1/6K1 w - - 0 1","1. Qh6 Bf7 2. Be5");
+
+INSERT INTO puzzles(type,title,description,fen,pgn) VALUES("overloading","Olga Girya vs Irina Korchenkova","Dagomys, 2008","4b1k1/4rppp/rp1q4/3Bn3/2PQ4/P4RP1/4P2P/5RK1 w - - 0 1","1. Bxf7+ Nxf7 2. Qxd6 Nxd6 3. Rf8#");
